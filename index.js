@@ -133,6 +133,14 @@ client.on("messageCreate", async (message) => {
     await message.delete().catch(() => {});
     return message.channel.send({ embeds: [embed] });
   }
+  
+if (message.content === "!ip") {
+  return message.reply(
+    "# MULTICRAFT SERVER ON 🔥\n" +
+    " **📡IP** : ```multicraft.srvmc.com\n\n```\n" +
+    " **🚪Porta** : ``25528``"
+  );
+}
 
   // ===== !clear =====
   if (message.content.startsWith("!clear ")) {
